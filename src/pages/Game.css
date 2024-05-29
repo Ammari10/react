@@ -1,0 +1,227 @@
+.navbar_game {
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.high__score {
+    color: #FFD600;
+    margin-right: 2rem;
+    text-shadow: 2px 2px 15px rgba(255, 214, 0, 0.3);
+}
+
+
+.game__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whos__that_pokemon_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25rem;
+    height: 35rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 3.35725px 16.7862px 4.19656px rgba(255, 214, 0, 0.39);
+    border-radius: 10.0717px;
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+.whos__that_pokemon_card .wtp__logo {
+    width: 12rem;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.whos__that_pokemon_card .pokemon__img {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 3rem;
+    filter: brightness(0);
+    transition: all 0.7s ease-in-out;
+}
+
+.whos__that_pokemon_card .pokemon__img.show {
+    filter: brightness(100%);
+}
+
+/* whos_pokemon_details */
+
+.whos_pokemon_details {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 35rem;
+    margin-top: 2rem;
+}
+
+.score__time_container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.4rem;
+    margin-left: 2rem;
+}
+
+.yellow__box {
+    box-shadow: 0px 0px 8px 2px rgba(255, 202, 13, 0.25);
+    border-radius: 10px 20px;
+    color: #FFD600;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    border: 2px solid #FFD600;
+}
+
+.option__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.option_box__unfill {
+    width: 60%;
+    margin: 0.5rem;
+    border: 2px solid #FFD600;
+    box-shadow: 0px 0px 5px 2px rgba(255, 214, 0, 0.29);
+    border-radius: 8px;
+    color: #FFD600;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.option_box__unfill.correct_opt {
+    background: green;
+}
+
+.option_box__unfill.wrong_opt {
+    background-color: red;
+}
+
+/* right bottom corner shadow and img */
+
+.game__right-shadow {
+    display: flex;
+    flex-direction: column;
+}
+
+.sm__right_img {
+    position: absolute;
+    right: 0;
+    width: 18rem;
+    height: 18rem;
+    z-index: 10;
+}
+
+.sm_right__side_blurred-shadow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10rem;
+    height: 12rem;
+    background: rgb(255, 214, 0);
+    background: radial-gradient(circle, rgba(255, 214, 0, 1) 0%, rgba(255, 214, 0, 0.4209033955379027) 81%);
+    filter: blur(100px);
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Query */
+
+@media screen and (max-width:1124px) {
+    .game__container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .whos_pokemon_details {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3.5rem;
+    }
+
+    .option__container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game__right-shadow {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .whos__that_pokemon_card {
+        width: 90%;
+        height: 35rem;
+    }
+
+    .score__time_container {
+        gap: 1.3rem;
+    }
+
+    .yellow__box {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .navbar_game {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .high__score {
+        margin-right: 0;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
